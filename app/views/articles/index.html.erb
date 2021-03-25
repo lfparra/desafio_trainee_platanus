@@ -1,0 +1,24 @@
+<h1 align="center">Mejores ofertas en las últimas 24 horas en BUDA</h1>
+
+<h4 align="center"> Última actualización al <%= @time.strftime("%d/%m/%Y") %> a las <%= @time.strftime("%H:%M:%S") %> horas.</h4>
+
+<table border='2' style="width:50%" align="center" >
+    <tr>
+        <th width="200">Mercado</th>
+        <th width="200">Máxima Oferta de Compra</th>
+        <th width="200">Moneda</th>
+        <th width="200">Mínima oferta de Venta</th>
+        <th width="200">Moneda</th>
+    </tr>
+
+    <% @markets.each do |market| %>
+ 
+        <tr>
+            <td align="center"><%= market['market_name']%></td>
+            <td align="center"><%= market['max_bid']['amount']%></td>
+            <td align="center"><%= market['max_bid']['currency']%></td>
+            <td align="center"><%= market['min_ask']['amount']%></td>
+            <td align="center"><%= market['min_ask']['currency']%></td>
+        </tr>
+    <% end %>
+    </table>
