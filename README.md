@@ -1,24 +1,28 @@
-# README
+# Trainee Challenge 🚀
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails application used to conect to Buda's API.
 
-Things you may want to cover:
+## Context 📌
 
-* Ruby version
+* This challenge is in the context to the trainee aplication for [Platanus](https://platan.us/) like to developer. 
+* The code was writting in Ruby language with Rails framework.
+* The challenge consisted in obtain the best offer of prices of bid and ask for a specific cryptocurrency market.
+* The [API](https://api.buda.com/#la-api-de-buda-com) is a service delivered by [BUDA](https://www.buda.com/chile), the largest cryptocurrency market in South America.
 
-* System dependencies
+## Run Server ⚙️
 
-* Configuration
+* You have to open the file "desafio_trainee" with VSCode.
+* In the console in the path of file, you have write:
 
-* Database creation
+  ```
+  $ rails server
+  ```
+* If the server is run correctly, you must go to the browser and type http://localhost:3000/ (it could be another url so always good to check in console).
 
-* Database initialization
+## Developer ✒️
 
-* How to run the test suite
+* **Leonardo Parra** ⌨️ github: [lfparra](https://github.com/lfparra).
 
-* Services (job queues, cache servers, search engines, etc.)
+## Gratitude 🎁
 
-* Deployment instructions
-
-* ...
+* I really appreciate the opportunity and I hope forward to joining the next batch of trainee. Thank you.
