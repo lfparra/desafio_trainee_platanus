@@ -2,23 +2,22 @@
 
 <h4 align="center"> Última actualización al <%= @time.strftime("%d/%m/%Y") %> a las <%= @time.strftime("%H:%M:%S") %> horas.</h4>
 
-<table border='2' style="width:50%" align="center" >
+<table border='2' style="width:40%" align="center" cellpadding="4" >
     <tr>
-        <th width="200">Mercado</th>
-        <th width="200">Máxima Oferta de Compra</th>
-        <th width="200">Moneda</th>
-        <th width="200">Mínima oferta de Venta</th>
-        <th width="200">Moneda</th>
+        <th width="100">Mercado</th>
+        <th width="80">Máxima Oferta de Compra</th>
+        <th width="80">Mínima Oferta de Venta</th>
+        <th width="100">Moneda</th>
     </tr>
 
     <% @markets.each do |market| %>
- 
-        <tr>
+         <tr>
             <td align="center"><%= market['market_name']%></td>
-            <td align="center"><%= market['max_bid']['amount']%></td>
-            <td align="center"><%= market['max_bid']['currency']%></td>
-            <td align="center"><%= market['min_ask']['amount']%></td>
+            <td align="right"><%= market['max_bid']['amount'] %></td>
+            <td align="right"><%= market['min_ask']['amount']%></td>
             <td align="center"><%= market['min_ask']['currency']%></td>
         </tr>
     <% end %>
     </table>
+
+    

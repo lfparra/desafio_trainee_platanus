@@ -39,16 +39,21 @@ class ArticlesController < ApplicationController
       
       dict_markets_status[count] = {'id' => count, 
           'market_name' => market_name, 
-          'max_bid' => {'amount' => max_bid_market[0], 
+          'max_bid' => {'amount' => ActiveSupport::NumberHelper::number_to_currency(max_bid_market[0], delimiter: '.', separator: ',', precision: 2), 
           'currency' => max_bid_market[1]}, 
-          'min_ask' => {'amount' => min_ask_market[0], 
+          'min_ask' => {'amount' => ActiveSupport::NumberHelper::number_to_currency(min_ask_market[0], delimiter: '.', separator: ',', precision: 2), 
           'currency' => min_ask_market[1]}
         }
+      #puts dict_markets_status[count]['max_bid']['amount']
+       
       count = count + 1
     end
-    
-    @markets = dict_markets_status
 
+
+
+    puts ActiveSupport::NumberHelper::number_to_delimited(dict_markets_status[1]['max_bid']['amount'], delimiter: '.', separator: ',' )
+
+    @markets = dict_markets_status
     @time = Time.now
   
   end
